@@ -1,0 +1,20 @@
+#include<stdio.h> 
+int day_of_year(int year, int month, int day);
+int main(void) 
+{ 
+int year,month,day; 
+scanf("%d%d%d",&year,&month,&day); 
+printf("%d",day_of_year(year,month,day));
+return 0;
+}
+int day_of_year(int year, int month, int day){
+	int a,b;
+	int t[2][13]={
+	{0,31,28,31,30,31,30,31,31,30,31,30,31},
+	{0,31,29,31,30,31,30,31,31,30,31,30,31}
+	};
+	b=(year%4==0&&year%100!=0||year%400==0);//在判断是否是闰年的时候结果只有0,1两个结果，所以将b放在行上
+	for(a=1;a<month;a++)
+	day=day+t[b][a];
+	return day;
+	}
