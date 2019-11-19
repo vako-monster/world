@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+	int i,pro,n;
+	int count[9];
+    scanf("%d",&n);
+	for(i=1;i<=8;i++)
+	count[i]=0;
+	for(i=1;i<=n;i++){
+	 
+    scanf("%d",&pro);
+    if(pro>=1&&pro<=8)
+  count[pro]++;
+ 
+
+   
+}
+
+for(i=1;i<=8;i++)
+	printf("%4d%4d\n",i,count[i]);
+	
+	return 0;
+}
+
+	 
