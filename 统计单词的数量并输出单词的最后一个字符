@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<string.h>//在用到len的时候要有的头文件
+int main(){
+	char a[1000];
+	gets(a);//表示输入字符串
+	int len = strlen(a),i=1,count=0;
+do{
+		if(a[i]==' '&&a[i-1]!=' '||a[i]=='\0'&&a[i-1]!=' '){
+			count++;
+		printf("%c",a[i-1]);}
+		
+	
+		if(a[i]=='\0')
+	break;
+	
+	
+	i++;
+	}while(1);
+
+	printf("\n");
+	printf("%d",count);
+	
+	return 0;
+}
