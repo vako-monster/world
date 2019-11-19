@@ -3,11 +3,11 @@ int main()
 {
     int cnt=0,t=0;
     char n='1';
-    for(cnt=0;n!='\n';t=0){
+    for(cnt=0;n!='\n';t=0){//在换行的时候结束，在t=0的时候出来
         scanf("%c",&n);
         while(n!=' '&&n!='\n'){
-            scanf("%c",&n);
-            t=1;
+            scanf("%c",&n);//输入字符串
+            t=1;//有标志保证在真的时候进行相加
         }
         if(t){
             cnt++;
