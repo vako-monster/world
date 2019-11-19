@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+	int m,n,i,j,c;
+	scanf("%d %d",&m,&n);
+	int a[m][n];
+	int b[100]={0};
+	for(i=0;i<m;i++)
+		for(j=0;j<n;j++)
+	     scanf("%d",&a[i][j]);
+	c=0;
+	for(i=0;i<m;i++){
+	for(j=0;j<n;j++){
+	
+	b[c]+=a[i][j];}//将各行之和放入一个新的数组
+    c++;}
+    for(i=0;i<m;i++)
+	printf("%d\n",b[i]);
+	return 0;
+}
