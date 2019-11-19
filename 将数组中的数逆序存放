@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main(){
+	int i,j,pro=0,n;
+	int count[10],a[10];
+    scanf("%d\n",&n);
+for(i=0;i<n;i++)
+	scanf("%d ",&count[i]);
+for(j=n-1;j>=0;j--)
+{
+	a[pro]=count[j];
+	pro++;
+}
+printf("%d",a[0]);
+for(i=1;i<n;i++){
+	printf(" %d",a[i]);
+}
+
+return 0;}
+	 
