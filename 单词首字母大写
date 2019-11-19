@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+    char s[10000];
+    gets(s);//表示输入的意思
+    int i;
+    for(i=0;s[i]!='\0';i++){
+        if((i==0||s[i-1]==' ')&&(s[i]>='a')&&s[i]<='z'){//选择在a到z的范围，在收位和前面有空格的位置上
+            s[i]=s[i]-'a'+'A';
+        }
+    }
+    puts(s);//表示输出的意思
+    return 0;
+}
