@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    double x,y,s=0;
+    for(i=0;i<10;i++){
+        scanf("%lf %lf",&x,&y);
+        s+=sqrt(x*x+y*y);//表示在求坐标的值且相加
+    }
+    printf("distance = %.6f",s);//%。6f要注意
+    return 0;
+}
