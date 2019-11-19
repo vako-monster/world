@@ -14,13 +14,13 @@ int Count_Digit ( const int N, const int D )
 {
 int i,p,count=0,q;
 q=N;
-if(q<0)
+if(q<0)//要分类q在大于0和小于0的情况
 q=-q;
-while(q!=0){
-	p=q%10;
+while(q!=0){//当q！=0的时候进入循环
+	p=q%10;//拿单个位数
 	if(p==D)
 	count++;
-	q/=10;
+	q/=10;//去掉位
 } if(N==0)
 count=1;
 return count;}
