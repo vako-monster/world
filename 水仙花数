@@ -1,0 +1,30 @@
+#include<stdio.h>
+double pow(int a,int t)
+{int i,p;
+p=a;
+for(i=2;i<=t;i++){
+    
+    a=p*a;
+}return a;
+
+}
+
+int main(){
+	int i,n,a,sum=0,p=0,s=0;
+	scanf("%d",&n);
+
+	for(i=pow(10,n-1);i<pow(10,n);i++){
+		p=i;
+	while(p!=0){
+		a=p%10;
+		p=p/10;
+		
+        s=pow(a,n);
+	    sum+=s;}
+	 if(sum==i)
+	printf("%d\n",i);
+	sum=0;
+	}
+
+	return 0;
+} 
