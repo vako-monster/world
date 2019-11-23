@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+int main() {
+	int b, c, d, num = 0, i, t, n, p, A, B,q;
+	scanf("%d", &n);
+	i = 1;
+	do {
+		
+		b = n / 100;
+		c = (n - b * 100) / 10;
+		d = n % 10;
+		if (b < c) {
+			t = b;
+			b = c;
+			c = t;
+		}
+		if (b < d) {
+			p = b;
+			b = d;
+			d = c;
+			c = p;
+		}
+		if (c < d) {
+			q = c;
+			c = d;
+			d = q;
+			
+		}
+         
+		A = b * 100 + c * 10 + d;
+
+		B = d * 100 +  c* 10 + b;
+
+		n = A - B;
+		printf("%d: %d - %d = %d\n", i, A, B, n);
+		i++;
+	} while (n != 495 && n != 0);
+
+	return 0;
+}
