@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main(){
+	int n,t;
+	scanf("%d %d",&n,&t);
+	int i=1,g;
+	while(i<=t){
+		scanf("%d",&g);
+		if(g<n&&g>0)
+		printf("Too small\n");
+		if(g>n)
+		printf("Too big\n");
+		if(g<0){
+		printf("Game Over\n");
+		break;}
+		if(g==n){
+			if(i==1)
+			printf("Bingo!\n");
+			else if(i<=3&&i!=1)
+			printf("Lucky You!\n");
+			else if(i>3&&i<=t)
+			printf("Good Guess!");
+			break;
+		}
+	i++;
+	}
+	
+		if(i>t)
+			printf("Game Over");
+	return 0;
+}
