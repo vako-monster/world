@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int Count_Digit ( const int N, const int D );
+
+int main()
+{
+    int N, D;
+	
+    scanf("%d %d", &N, &D);
+    printf("%d\n", Count_Digit(N, D));
+    return 0;
+}
+int Count_Digit(const int N, const int D) {
+	int i, t, p=0;
+	i = N;
+	if (i < 0)
+		i = -i;
+	do {
+		t = i % 10;
+		if (t == D)
+			p++;
+		i = i / 10;
+	} while (i > 0);
+	
+
+	return p;
+}
