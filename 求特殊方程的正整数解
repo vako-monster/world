@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+int i,j,n,count;
+count=0;
+scanf("%d",&n);
+for(i=1;i<=sqrt(n);i++){
+	for(j=1;j<=sqrt(n);j++)
+	if(i*i+j*j==n&&i<j){
+		count++;
+		printf("%d %d\n",i,j);
+	}
+}if(count==0)
+printf("No Solution");
+return 0;
+	
+
+}
