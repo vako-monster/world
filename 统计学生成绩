@@ -1,0 +1,27 @@
+#include<stdio.h> 
+int main()
+{ int n,A,B,C,D,E;
+int a,i;
+scanf("%d",&n);
+A=0;
+B=0;C=0;D=0;E=0;
+while(n){
+	for(i=1;i<=n;i++){
+	
+	scanf("%d",&a);
+	if(a>=90)
+	A++;
+	else if(a<90&&a>=80)
+	B++;
+	else if(a<80&&a>=70)
+	C++;
+	else if(a<70&&a>=60)
+	D++;
+	else E++;}
+	break;
+}
+
+
+printf("%d %d %d %d %d",A,B,C,D,E);
+      return 0;
+}
