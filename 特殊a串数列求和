@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int a,n,sum=0,i,p=0;
+	scanf("%d %d",&a,&n);
+
+	for(i=1;i<=n;i++){
+sum=sum+a;
+ a=a*10;
+ p+=sum;
+	}
+	printf("s = %d",p); 
+	return 0;
+}
