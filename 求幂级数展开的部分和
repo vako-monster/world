@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+double fact(double n);
+int main() {
+	int i=2;
+	double  x, c = 0,b;
+	scanf("%lf", &x);
+	c =  1 + x;
+	while (pow(x, i) / fact(i)>= 0.00001) {
+		c+= pow(x, i) / fact(i);
+		
+		i++;
+		}
+c+= pow(x, i) / fact(i);
+		printf("%.4lf", c);
+	
+	return 0;}
+
+double fact(double n) {
+	double a, product=1;
+	for (a = 2;a <= n;a++) {
+		product = product * a;
+	}
+	return product;
+}
