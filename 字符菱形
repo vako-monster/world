@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<math.h>
+void fact(char ch,int n);
+int main(){
+int i,j,n;
+char ch;
+
+while(scanf(" %c %d",&ch,&n)!=EOF){
+	fact(ch,n);
+}
+return 0;}
+void fact(char ch,int n){
+int i,j;
+
+
+for(i=1;i<=2*n-1;i++){
+	if(i<=n){
+	
+	for(j=1;j<=n-i;j++){
+		printf(" ");}
+		for(j=1;j<2*i-1;j++){
+			printf("%c",ch);}
+			printf("%c\n",ch);
+		}
+if(i>n){
+	for(j=1;j<=i-n;j++){
+		printf(" ");}
+	for(j=1;j<2*(n-(i-n))-1;j++){
+			printf("%c",ch);
+		}
+		printf("%c\n",ch);
+	}
+}
+}
+
+
+
+
+
