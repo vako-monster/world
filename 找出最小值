@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+	int n,min,i,t;
+	scanf("%d",&n);
+	t=n;
+	for(i=1;i<=t;i++){
+	scanf("%d",&n);
+		if(min>n){
+		
+		min=n;
+	
+		}
+	
+		
+	}
+	printf("min = %d",min);
+	return 0;
+}
