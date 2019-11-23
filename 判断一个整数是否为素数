@@ -1,0 +1,28 @@
+ #include<stdio.h>
+#include<math.h>
+int main()
+{
+	int M, limit,count = 0,i;
+	scanf("%d", &M);
+	if (M <= 0 || M == 1 )
+		printf("No");
+	else if (M == 2 )
+		printf("Yes");
+	else
+	{
+		limit = sqrt(M);
+		for (i = 2;i <= limit;i++)
+		{
+			if (M % i == 0)
+			{
+				count++;
+				break;
+			}
+		}
+		if (count == 1)
+			printf("No");
+		else
+			printf("Yes");
+	}
+	return 0;
+}
