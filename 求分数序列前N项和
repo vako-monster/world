@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main() {
+	int i;
+	double  a, b, c, n,t=0,q=0;
+	double sum = 0;
+	scanf("%lf", &n);
+	a = 2;
+	b = 1;
+	for (i = 1;i <= n;i++) {
+		sum += a / b;
+		t = a;
+		q = b;
+		a = t + q;
+		b = t;
+
+		
+		
+	}printf("%.2lf", sum);
+	return 0;
+}
