@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	int i,n;
+	char sx[80],smin[80];
+	scanf("%d",&n);
+	scanf("%s",smin);//因为在前面已经输入一个所以后面从1开始
+	for(i=1;i<n;i++){
+		scanf("%s\n",sx);
+		if(strcmp(smin,sx)>0)//前面的大于后面的话就正数，
+		strcpy(smin,sx);
+	}
+	printf("Min is: %s",smin);
+	return 0;
+}
