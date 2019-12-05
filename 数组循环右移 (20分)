@@ -1,0 +1,36 @@
+#include <stdio.h>
+#define MAXN 10
+
+int ArrayShift( int a[], int n, int m );
+
+int main()
+{
+    int a[MAXN], n, m;
+    int i;
+
+    scanf("%d %d", &n, &m);
+    for ( i = 0; i < n; i++ ) scanf("%d", &a[i]);
+
+    ArrayShift(a, n, m);
+
+    for ( i = 0; i < n; i++ ) {
+        if (i != 0) printf(" ");
+        printf("%d", a[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+int ArrayShift( int a[], int n, int m ){
+	int i,j;
+	for(i=0;i<m;i++){//在大循环中移动次数
+		int b=a[n-1];//让最后一个变成第一个
+		for(j=n-2;j>=0;j--){//而让中间的数向后移动，从n-2开始
+			a[j+1]=a[j];
+		}
+		a[0]=b;
+		
+	} 
+	return 0;
+}
+
