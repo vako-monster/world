@@ -1,0 +1,36 @@
+#include <stdio.h>
+#define MAXN 10
+
+void sort( int a[], int n );
+
+int main()
+{
+    int i, n;
+    int a[MAXN];
+
+    scanf("%d", &n);
+    for( i=0; i<n; i++ )//输入数组
+        scanf("%d", &a[i]);
+
+    sort(a, n);
+
+    printf("After sorted the array is:");
+    for( i = 0; i < n; i++ )//输出数组
+        printf(" %d", a[i]);
+    printf("\n");
+
+    return 0;
+}
+void sort( int a[], int n ){
+	int k,index,temp,i;//需要有四个变量
+	for(k=0;k<n-1;k++){//从0开始，小于数组元素还要减1
+		index=k;//让k等于这个变量相当于一个值
+	
+	for(i=k+1;i<n;i++)//要从k的后一位数开始进行比较
+	if(a[i]< a[index])//当i的数小于index的时候，找到小于它的数进行交换
+	index=i;//让i=index
+	temp=a[index];
+	a[index]=a[k];
+	a[k]=temp;
+}
+}
