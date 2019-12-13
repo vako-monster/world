@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+	int n;
+	scanf("%d",&n);
+	int cnt=0;
+	for(int y=0;y<50;y++){
+		for(int f=0;f<100;f++){
+			if(100*f+y==200*y+2*f+n){
+				printf("%d.%d",y,f);
+				cnt=1;
+				break;
+				
+			}
+		}
+	}
+	if(cnt==0){
+		printf("No Solution");
+	}
+	return 0;
+}
