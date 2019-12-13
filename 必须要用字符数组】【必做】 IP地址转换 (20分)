@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+int main(){
+	char a[32];
+	int i,sum[4]={0},j;
+	scanf("%s",a);
+	for(j=0;j<4;j++)
+	for(i=7;i>=0;i--)
+	if(a[i+8*j]=='1')
+	sum[j]+=pow(2,7-i);
+	printf("%d.%d.%d.%d",sum[0],sum[1],sum[2],sum[3]);
+	return 0;
+}
