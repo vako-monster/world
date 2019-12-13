@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+struct stud_node {
+     int    num;
+     char   name[20];
+     int    score;
+     struct stud_node *next;
+};
+struct stud_node *head, *tail;
+
+void input();
+
+int main()
+{
+    struct stud_node *p;
+	
+    head = tail = NULL;
+    input();
+    for ( p = head; p != NULL; p = p->next )
+        printf("%d %s %d\n", p->num, p->name, p->score);
+
+    return 0;
+}
+void input()
+{int number,score;
+char name[100];
+struct stud_node*ptr=NULL;
+scanf("%d %s %d",&number,name,&score);
+while(number!=0)
+{
+ptr=(struct stud_node*)malloc(sizeof(struct stud_node));
+ptr->num=number;
+ptr->score=score;
+strcpy(ptr->name,name);
+ptr->next=NULL;
+if(head==NULL)head=ptr;
+else tail->next=ptr;
+tail=ptr;
+scanf("%d %s %d",&number,name,&score);
+} 
+	
+}
