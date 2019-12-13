@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<math.h>
+#define PI 3.1415926535
+void cal(int sel);
+double vol_ball(void);
+double vol_cylinder(void);
+double vol_cone(void);
+int main(){
+	int sel;
+
+	while(1){
+		printf("1-Ball\n2-Cylinder\n3-Cone\nother-Exit\nPlease enter your command:\n");
+		scanf("%d",&sel);
+		if(sel<1||sel>3)
+		break;
+		else 
+		cal(sel);
+	}
+	return 0;
+} 
+void cal(int sel){
+
+
+	switch(sel){
+		
+		case 1:
+	
+		printf("Please enter the radius:\n");
+	
+		printf("%.2lf\n",vol_ball());
+		break;
+		case 2:
+		printf("Please enter the radius and the height:\n");
+	    printf("%.2lf\n",vol_cylinder());
+		break;
+		case 3:printf("Please enter the radius and the height:\n");
+	    printf("%.2lf\n",vol_cone());
+		break;
+
+	}
+
+}
+double vol_ball(void)
+{   double r,h;
+		scanf("%lf",&r);
+	    return (4.0/3.0*PI*r*r*r);
+	
+}
+double vol_cylinder(void){
+	double r,h;
+		scanf("%lf %lf",&r,&h);
+		return (PI*r*r*h);
+}
+double vol_cone(void){
+	double r,h;
+		scanf("%lf %lf",&r,&h);
+		return (1.0/3.0*PI*r*r*h);
+}
