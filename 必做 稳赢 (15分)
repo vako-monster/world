@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+int main () {
+    int k, n = 0, i = 0;
+    char s[80];
+    scanf("%d", &k);
+    getchar();
+    while ((s[i] = getchar()) != '\n') {
+        i++;
+    }
+    s[i] = '\0';
+    while  (strlen(s) != 3) {
+        if (n == k) {
+            if (strlen(s) == 6) {
+                printf("ChuiZi\n");
+            }else if (strlen(s) == 7) {
+                printf("JianDao\n");
+            }else if (strlen(s) == 2) {
+                printf("Bu\n");
+            }
+            n = 0;
+        }else {
+            if (strlen(s) == 6) {
+                printf("Bu\n");
+            }else if (strlen(s) == 7) {
+                printf("ChuiZi\n");
+            }else if (strlen(s) == 2) {
+                printf("JianDao\n");
+            }
+            n++;
+        }
+        i = 0;
+        while ((s[i] = getchar()) != '\n') {
+            i++;
+        }
+        s[i] = '\0';
+    }
+    return 0;
+}
