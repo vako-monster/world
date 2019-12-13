@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+	int n,i;
+	char ch[80],a[80];
+	scanf("%d",&n);
+	scanf("%s",a);
+    
+
+	for(i=1;i<n;i++){
+		scanf("%s\n",ch);
+		if(strlen(a)<strlen(ch))
+		strcpy(a,ch);
+		}
+		printf("The longest is: %s",a);
+		return 0;
+	
+}
