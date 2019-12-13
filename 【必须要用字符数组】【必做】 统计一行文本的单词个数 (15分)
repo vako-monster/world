@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+	char ch='1';
+	int i=0,cnt=0,t=0;
+   for(cnt=0;ch!='\n';t=0){
+   
+    	scanf("%c",&ch);
+    	while(ch!=' '&&ch!='\n'){
+    		scanf("%c",&ch);
+    		t=1;
+    	}
+		if(t){
+			cnt++;
+		}
+	}
+	printf("%d",cnt);
+	return 0;
+}
