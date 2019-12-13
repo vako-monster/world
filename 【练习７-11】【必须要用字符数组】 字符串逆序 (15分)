@@ -1,0 +1,16 @@
+#include<stdio.h>
+const int n=80;
+int main(){
+	char a[n];
+	int cnt,j;
+	int i=-1;
+
+		i++;
+		scanf("%c",&a[i]);
+		cnt=i;
+	}
+	for(j=cnt-1;j>=0;j--){
+		printf("%c",a[j]);
+	}
+	return 0;
+}
