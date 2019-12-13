@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+/* 请在这里填写答案 */
+
+int main()
+{
+    int a, b;
+
+    cin >> a >> b;
+
+    Swap(a, b);
+
+    cout << a << " " << b << endl;
+
+    return 0;
+}
+void Swap(int &a,int &b){
+	int t;
+	t=a;
+	a=b;
+	b=t;
+}
