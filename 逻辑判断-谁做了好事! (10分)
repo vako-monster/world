@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main(){
+int n,t=0;
+int a,b,c,d,e,f;
+scanf("%d",&n);
+for(f=0;f<2;f++){
+	for(e=0;e<2;e++){
+	   for(d=0;d<2;d++){
+	      for(c=0;c<2;c++){
+	         for(b=0;b<2;b++){
+	            for(a=0;a<2;a++){
+	            	if((a+b+c+d+e+f==1)&&(!a+c+d+!d+(c||e)+(!d&&!e)==n)){
+	            		if(t){
+	            		printf(" or ");}
+	            		if(a){
+						printf("A");t=1;}
+	            		if(b){
+						printf("B");t=1;}
+	            		if(c){
+						printf("C");t=1;}
+	            		if(d){
+						printf("D");t=1;}
+	            		if(e){
+						printf("E");t=1;}
+	            		if(f){
+						printf("F");t=1;}
+					}
+				}
+            }
+        }
+    }
+}
+}
+    if(!t)
+    printf("Error");
+				
+			
+		
+	return 0;
+}
