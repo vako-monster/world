@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main(){
+	int count=0,j;
+	char ch[81];
+	char n;
+    gets(ch);
+	scanf("%c",&n);
+	for(j=0;ch[j]!='\0';j++){
+		if(ch[j]==n){
+			count++;
+		}
+	}
+	printf("%d",count);
+	return 0;
+}
