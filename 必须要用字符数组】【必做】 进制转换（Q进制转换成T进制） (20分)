@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+	int n,a,i,t,sum=0;
+	scanf("%d",&n);
+	char ch;
+    getchar();
+    while((ch=getchar())!='\n')
+    	if(ch>='0'&&ch<=('0'+n-1))
+    	sum=sum*n+(ch-'0');
+    	if(sum==0){
+    		printf("0\n");
+    		return 0;
+		}
+		scanf("%d",&t);
+		if(t==10){
+			printf("%d\n",sum);
+			return 0;
+		}
+		int c=0;
+		int tnt[100000];
+		while(sum!=0){
+			tnt[c++]=sum%t;
+			sum/=t;
+		}
+		for(int i=c-1;i>=0;i--)
+		printf("%d",tnt[i]);
+		return 0;
+	
+	
+}
