@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main(){
+	int n,men,woman,child,count=0;
+	scanf("%d",&n);
+	for(men=0;men<=n;men++)
+		for(woman=0;woman<=n;woman++)
+			for(child=0;child<=n;child++){
+			    if(child+men+woman==n&&men*3+woman*2+child*1.0/2.0==n){
+				count++;
+				printf("men = %d, women = %d, child = %d\n",men,woman,child);}
+				}
+	            if(n<3)
+				printf("None");
+				
+		    	
+				
+			
+		
+	return 0;
+}
