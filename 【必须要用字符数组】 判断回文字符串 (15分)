@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main(){
+	int i,k,a;
+	char line[80];
+	k=0;
+	while((line[k]=getchar())!='\n')
+	k++;
+	line[k]='\0';
+	a=k;
+	i=0;
+	k=k-1;
+	
+	while(i<k){
+		if(line[i]!=line[k])
+		break;
+		i++;
+		k--;
+	
+	}
+
+	if(i>=k){
+		for(i=0;i<a;i++){
+			printf("%c",line[i]);}
+			printf("\n"); 
+		
+	printf("Yes");}
+	else {
+		for(i=0;i<a;i++){
+			printf("%c",line[i]);}
+			printf("\n"); 
+		
+	printf("No");}
+	return 0;
+} 
