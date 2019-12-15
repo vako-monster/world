@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+// 字符串复制(赋值)
+char* StrCpy(char *dst, const char *src);
+
+int main()
+{
+    char a[1024], b[1024], c[1024];
+    gets(a);
+    StrCpy(c, StrCpy(b, a));
+    puts(a);
+    puts(b);
+    puts(c);
+    return 0;
+}
+char* StrCpy(char *dst, const char *src){
+	int i;
+	for(i=0;src[i]!='\0';i++){
+		dst[i]=src[i];
+	}
+	dst[i]='\0';
+	return dst;
+}
